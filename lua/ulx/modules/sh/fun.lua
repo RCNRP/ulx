@@ -1,5 +1,17 @@
 local CATEGORY_NAME = "Fun"
 
+surface.CreateFont( "TextFont", {
+    font = "Arial",
+    size = 16,
+    weight = 500,
+} )
+ 
+ 
+function DrawText()
+draw.SimpleText("God Mode Enabled!", "TextFont", ScrW() / 2 - 70, 5, Color(255,255,255,255)
+end
+
+
 ------------------------------ Slap ------------------------------
 function ulx.slap( calling_ply, target_plys, dmg )
 	local affected_plys = {}
@@ -281,8 +293,12 @@ function ulx.god( calling_ply, target_plys, should_revoke )
 
 	if not should_revoke then
 		ulx.fancyLogAdmin( calling_ply, "#A granted god mode upon #T", affected_plys )
+		-- added --
+		hook.Add("HUDPaint", "DrawText", DrawText);
 	else
 		ulx.fancyLogAdmin( calling_ply, "#A revoked god mode from #T", affected_plys )
+		-- added --
+		hook.Remove("HUDPaint", "DrawText");
 	end
 end
 local god = ulx.command( CATEGORY_NAME, "ulx god", ulx.god, "!god" )
