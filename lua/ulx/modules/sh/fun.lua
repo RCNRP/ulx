@@ -1,14 +1,22 @@
 local CATEGORY_NAME = "Fun"
 
+
 ------------------------------ Lag -------------------------------
 function ulx.lag( calling_ply )
+	local i = 0
 	for k, v in pairs( ents.FindByClass( "prop_*" ) ) do
 		local phys = v:GetPhysicsObject()
 		if (IsValid(phys)) then
+			i = i + 1
 			phys:EnableMotion(false)
 		end
+	end
+	ulx.fancyLogAdmin( calling_ply, "#A froze a total of #i props!", i )
 end
+local lag = ulx.command( CATEGORY_NAME, "ulx lag", ulx.lag, "!lag" )
 lag:defaultAccess( ULib.ACCESS_ADMIN )
+lag:help( "Freezes all props to prevent lag." )
+
 
 ------------------------------ Slap ------------------------------
 function ulx.slap( calling_ply, target_plys, dmg )
