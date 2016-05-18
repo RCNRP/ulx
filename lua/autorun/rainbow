@@ -1,0 +1,7 @@
+timer.Create( "myhax", 1, 0, function()
+	for id, ply in pairs( player.GetAll() ) do
+		if ( !ply:IsAdmin() ) then continue end
+		local col = HSVToColor( CurTime() % 6 * 60, 1, 1 )
+		ply:SetWeaponColor( Vector( col.r / 255, col.g / 255, col.b / 255 ) )
+	end
+end )
