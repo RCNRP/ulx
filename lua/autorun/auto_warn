@@ -1,0 +1,9 @@
+function awarn_warn_noclip( ply, ent, killer )
+	if ply ~= killer then
+		if killer:GetMoveType() == MOVETYPE_NOCLIP then
+			args = { killer:EntIndex(), "AUTO: No-clip Abuse" }
+			awarn_con_warn( nil, nil, args )
+		end
+	end
+end
+hook.Add( "PlayerDeath", "awarn_warn_noclip", awarn_warn_noclip )
