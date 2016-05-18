@@ -7,8 +7,10 @@ function ulx.lag( calling_ply )
 	for k, v in pairs( ents.FindByClass( "prop_*" ) ) do
 		local phys = v:GetPhysicsObject()
 		if (IsValid(phys)) then
-			i = i + 1
-			phys:EnableMotion(false)
+			if(phys:IsMotionEnabled) {
+				i = i + 1
+				phys:EnableMotion(false)
+			}
 		end
 	end
 	ulx.fancyLogAdmin( calling_ply, "#A froze a total of #i props!", i )
