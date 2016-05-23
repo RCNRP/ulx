@@ -7,3 +7,17 @@ function awarn_warn_noclip( ply, ent, killer )
 	end
 end
 hook.Add( "PlayerDeath", "awarn_warn_noclip", awarn_warn_noclip )
+
+if ulx then
+
+	function awarn_warn_godmode( ply, ent, killer )
+		if ply ~= killer then
+			if killer.ULXHasGod then
+				args = { killer:EntIndex(), "AUTO: Killed Player While Godded" }
+				awarn_con_warn( nil, nil, args )
+			end
+		end
+	end
+	hook.Add( "PlayerDeath", "awarn_warn_godmode", awarn_warn_godmode )
+	
+end
