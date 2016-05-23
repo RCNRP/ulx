@@ -73,3 +73,13 @@ end
 local lagon = ulx.command( "Logan's Custom Things", "ulx lagon", ulx.lagon, "!lagon" )
 lagon:defaultAccess( ULib.ACCESS_ADMIN )
 lagon:help( "Turns on lag detection." )
+
+function ulx.lagtrigger( calling_ply, tps )
+	EntitysMinThinks = tps
+	ulx.fancyLogAdmin( calling_ply, "#A changed the lag detection trigger to #i TPS", tps )
+end
+
+local lagtps = ulx.command( "Logan's Custom Things", "ulx lagtrigger", ulx.lagtrigger, "!lagtrigger" )
+lagtps:addParam{ type=ULib.cmds.NumArg, min=30, default=30, hint="TPS", ULib.cmds.round }
+lagtps:defaultAccess( ULib.ACCESS_ADMIN )
+lagtps:help( "Changes the TPS the lag detection will go off at." )
