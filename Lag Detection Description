@@ -1,0 +1,20 @@
+Hello people!
+
+This is my first addon released on Scriptfodder, I've made some other small addons aswell but nothing of the scale this is currently.
+
+Requirements
+------------------------
+* ULX
+* Basic knowledge of unzipping and dragging + dropping a folder into the "addons" folder of your GMod Server
+
+Features
+------------------------
+* !lag command to freeze all players props
+* Auto lag detection with configuarable settings with ConVar (sv_lagdet_trigger) and in-game menu (!lagmenu)
+
+
+Upcomming Features
+-----------------------
+* Add config file to change the TPS trigger without having to edit the lua file(s) directly.
+* Better design for the in-game menu (Overall I feel that it's shitty, but at least it is currently functional)
+* Rewrite some of the code ( especially redundant things that have been left there )
