@@ -19,3 +19,5 @@ Upcomming Features
 * Add config file to change the TPS trigger without having to edit the lua file(s) directly.
 * Better design for the in-game menu (Overall I feel that it's shitty, but at least it is currently functional)
 * Rewrite some of the code ( especially redundant things that have been left there )
+* Create ULX permission for !lagmenu
+* Fix support with addons that use player chat hooks.
