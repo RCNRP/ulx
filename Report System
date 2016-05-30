@@ -1,0 +1,28 @@
+Hello people!
+
+This is my first addon released on Scriptfodder, I've made a ton of smaller addons but nothing of the scale this is currently.  If you have any suggestions feel free to shoot them at me.
+
+Requirements
+------------------------
+* ULX
+* A GMod Server (ofc)
+* Basic knowledge of unzipping and dragging + dropping a folder into the "addons" folder of your GMod Server
+
+NOTE: This addon has only been tested on DarkRP, therefore, support may be limited if running other gamemode(s).  
+
+Features
+------------------------
+* Fast support
+* Always Updating
+* Easy to use
+* Admin menu (!reports)
+And much more to come!
+
+
+Upcomming Features
+-----------------------
+* Add config to be able to edit the sit positions
+* Better design for the in-game menu (Overall I feel that it's shitty, but at least it is currently functional)
+* Create categories that players can report in and a VGUI for reporting (with RDM category that will store the last person that killed them and when report is accepted it will teleport both players instead of just teleporting the reporter)
+* Strip players of their weapons while in sit and once the sit has ended give them back.
+Have a feature you'd like to see implemented?  Tell me in the comments section and I will consider it!
